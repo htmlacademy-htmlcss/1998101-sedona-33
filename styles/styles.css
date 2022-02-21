@@ -599,25 +599,25 @@ body {
 }
 
 .hotels-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  gap: 10px 18px;
 }
 
+/* Карточка */
 .hotels-card {
-  width: 340px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-right: 18px;
-  margin-bottom: 10px;
+  padding: 20px;
 }
 
-.hotels-card:nth-child(3n) {
-  margin-right: 0;
+.hotels-card-image {
+  margin-bottom: 16px;
 }
 
 .hotels-card-link {
@@ -628,6 +628,15 @@ body {
   font-size: 24px;
   line-height: 31px;
   color: #000000;
+  margin-top: 0;
+}
+
+.hotels-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .hotels-card-type {
@@ -638,17 +647,18 @@ body {
 .hotels-card-price {
   font-size: 18px;
   line-height: 24px;
+  text-align: start;
 }
 
-.show-more-container{
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 30px 0;
+.card-button {
+  display: flex;
+  margin-bottom: 16px;
 }
 
 .hotels-card-button {
   width: 133px;
   height: 37px;
+  margin-right: 26px;
   padding: 9px 0 10px 0;
   font-weight: 700;
   font-size: 16px;
@@ -677,10 +687,56 @@ body {
 }
 
 .rating {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.two-stars {
+  width: 43px;
+  height: 17px;
+  background-image: url("../images/star.svg");
+  background-size: 18px 17px;
+  background-repeat: space;
+  margin-right: 97px;
+}
+
+.three-stars {
+  display: flex;
+  width: 68px;
+  height: 17px;
+  background-image: url("../images/star.svg");
+  background-size: 18px 17px;
+  background-repeat: space;
+  margin-right: 72px;
+}
+
+.four-stars {
+  width: 89px;
+  height: 17px;
+  background-image: url("../images/star.svg");
+  background-size: 18px 17px;
+  background-repeat: space;
+  margin-right: 49px;
+}
+
+.hotels-card-rating {
+  text-align: center;
+  width: 160px;
+  height: 37px;
+  border-radius: 4px;
   font-size: 16px;
   line-height: 21px;
   background-color: #f2f2f2;
   text-transform: uppercase;
+  margin: 0;
+  padding: 9px 0 10px 0;
+}
+
+.show-more-container {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 30px 0;
 }
 
 .button-show-more {
