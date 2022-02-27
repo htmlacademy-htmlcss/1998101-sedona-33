@@ -44,7 +44,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 .visually-hidden {
@@ -112,28 +112,38 @@ body {
   margin-left: auto;
 }
 
-.nav-user-link {
-  min-width: 18px;
-  min-height: 18px;
-  padding: 20px 11px;
-}
-
 .favorite-counter {
   position: absolute;
-  top: 15px;
-  right: 360px;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  background-color: #7db54f;
-  border-radius: 10px;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 13px;
+  bottom: 30px;
+  left: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: -0.1em;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 50%;
+}
+
+.nav-user-link {
+  min-width: 18px;
+  min-height: 18px;
+  margin: 0;
+  padding: 20px 11px;
+}
+
+.nav-user-link:hover svg {
+  fill: #756257;
+}
+
+.nav-user-link:active {
+  /* fill: #756257; */
+  opacity: 0.3;
 }
 
 .button {
@@ -157,7 +167,7 @@ body {
   height: 37px;
   color: #ffffff;
   background-color: #756257;
-  margin-left: 20px;
+  margin-left: 21px;
   padding-top: 9px;
   padding-bottom: 8px;
 }
@@ -172,7 +182,6 @@ body {
 
 .header-button:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .button-brown {
@@ -189,6 +198,8 @@ body {
   flex-direction: column;
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px 0px #00000033;
 }
 
 .welcome-container {
@@ -208,7 +219,6 @@ body {
   display: block;
   margin: 0 auto;
   padding-top: 51px;
-  /* padding-bottom: 83px; */
 }
 
 .welcome-text {
@@ -363,7 +373,6 @@ body {
 }
 
 .button-search {
-  font-family: PT Sans;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -385,7 +394,6 @@ body {
 
 .button-search:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .subscription {
@@ -453,7 +461,6 @@ body {
 
 .subscription-button:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .footer {
@@ -476,6 +483,8 @@ body {
   height: 40px;
   display: block;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-social-icon {
@@ -492,14 +501,12 @@ body {
   fill: #68a2ca;
 }
 
-.footer-social-link:focus svg {
+.footer-social-link:focus {
   outline: 3px solid #83B3D3;
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
 }
 
-.footer-social-link:active svg {
+.footer-social-link:active {
   opacity: 0.3;
 }
 
@@ -513,6 +520,8 @@ body {
 }
 
 .footer-contact-phone {
+  display: block;
+  padding: 15px;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
@@ -530,12 +539,26 @@ body {
 
 .footer-contact-phone:active {
   opacity: 0.3;
-  outline: none;
 }
 
 .footer-copyright {
-  display: flex;
-  align-items: center;
+  display: block;
+  padding: 18px 22px;
+  color: #000000;
+}
+
+.footer-copyright:hover svg {
+  fill: #756257;
+}
+
+.footer-copyright:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.footer-copyright:active {
+  fill: #756257;
+  opacity: 0.3;
 }
 
 .filters {
@@ -578,17 +601,13 @@ body {
 }
 
 .breadcrumbs-link {
-  /* margin-right: 10px; */
   color: #ffffff;
   text-decoration: none;
 }
 
-.breadcrumbs-item {
-  margin-right: 10px;
-}
-
-.breadcrumbs-item:first-child .breadcrumbs-link::before {
-  content: url("../images/home.svg");
+.breadcrumbs li:not(:last-child)::after {
+  content: url("../images/arrow-nav.svg");
+  margin: 0 10px;
 }
 
 .breadcrumbs-link:hover{
@@ -846,7 +865,6 @@ body {
 
 .hotels-card-button:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .button-favourites-hotels {
@@ -874,7 +892,6 @@ body {
 
 .button-favourites-hotels:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .button-favourites-green {
@@ -891,7 +908,6 @@ body {
 
 .button-favourites-green:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .rating {
@@ -972,7 +988,6 @@ body {
 
 .button-show-more:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 /* Пагинация*/
@@ -1023,8 +1038,6 @@ body {
 
 .pagination-link:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
-
 }
 
 .pagination-current {
@@ -1045,6 +1058,18 @@ body {
   background-color: #ffffff;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
+}
+
+.sorting-select:hover {
+  border: 2px solid #83b3d3;
+}
+
+.sorting-select:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.sorting-select:active {
+  outline: 2px solid #e6e6e6;
 }
 
 .subscription-catalog {
@@ -1075,4 +1100,12 @@ body {
   line-height: 26px;
   width: 600px;
   padding-left: 20px;
+}
+
+.form-input:hover {
+  background-color: #e6e6e6;
+}
+
+.form-input:focus {
+  outline: 3px solid #83B3D3;
 }
